@@ -1,0 +1,23 @@
+
+.cont__bag {
+    position: relative;
+
+    width: 30px;
+    height: 30px;
+}
+.count-products {
+    position: absolute;
+    top: 55%;
+    right: 0;
+    background-color: #000;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.contador-productos {
+    font-size: 10px;
+ }
