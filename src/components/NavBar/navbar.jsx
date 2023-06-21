@@ -1,11 +1,12 @@
+import { Link } from "react-router-dom"
 import "./navbar.css"
 
 const NavBar = () => {
     return (
         <nav className="header__nav">
-            <a className="header__link" href="#">Nosotros</a>
-            <a className="header__link" href="#">Productos</a>
-            <a className="header__link" href="#">Contacto</a>
+            <Link className="header__link" to="/">Productos</Link>
+            <Link className="header__link" to="/nosotros">Nosotros</Link>
+            <Link className="header__link" to="/contacto">Contacto</Link>
         </nav>
     )
 }

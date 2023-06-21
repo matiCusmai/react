@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "nombre": "Blusa",
+        "descripcion": "La mejor blusa de todas",
+        "precio": 9000,
+        "img": "../../img/blusas.webp",
+        "category": "blusas"
+    },
+    {
+        "id": 2,
+        "nombre": "Remera 1",
+        "descripcion": "Remera espectacular para todo",
+        "precio": 7900,
+        "img": "../../img/remera-1.webp",
+        "category": "remeras"
+    },
+    {
+        "id": 3,
+        "nombre": "Remera 2",
+        "descripcion": "Remera flor",
+        "precio": 7500,
+        "img": "../../img/remera-2.webp",
+        "category": "remeras"
+    },
+    {
+        "id": 4,
+        "nombre": "Remera 3",
+        "descripcion": "Remera espectacular para todo",
+        "precio": 6500,
+        "img": "../../img/remera-3.webp",
+        "category": "remeras"
+    },
+    {
+        "id": 5,
+        "nombre": "Sweater",
+        "descripcion": "Sweater para aguantar el ofri",
+        "precio": 34000,
+        "img": "../../img/sweaters.webp",
+        "category": "sweaters"
+    }, {
+        "id": 6,
+        "nombre": "Vestido 1",
+        "descripcion": "Vestido margarita",
+        "precio": 25000,
+        "img": "../../img/vestido1.webp",
+        "category": "vestidos"
+    },
+    {
+        "id": 7,
+        "nombre": "Vestido 2",
+        "descripcion": "Vestido de colores",
+        "precio": 27000,
+        "img": "../../img/vestido2.webp",
+        "category": "vestidos"
+    },
+    {
+        "id": 8,
+        "nombre": "Vestido 3",
+        "descripcion": "Vestido casual para todos los dias",
+        "precio": 22000,
+        "img": "../../img/vestido3.webp",
+        "category": "vestidos"
+    }
+]
