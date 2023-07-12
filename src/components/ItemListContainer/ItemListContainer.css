@@ -84,6 +84,8 @@ h4 {
     border-radius: 5px;
     cursor: pointer;
     font-size: 11px;
+    text-decoration: none;
+    text-align: center;
 }
 .price {
     font-family: Arial, Helvetica, sans-serif;

@@ -5,7 +5,8 @@
         "descripcion": "La mejor blusa de todas",
         "precio": 9000,
         "img": "../../img/blusas.webp",
-        "category": "blusas"
+        "category": "blusas",
+        "stock": 10
     },
     {
         "id": 2,
@@ -13,7 +14,8 @@
         "descripcion": "Remera espectacular para todo",
         "precio": 7900,
         "img": "../../img/remera-1.webp",
-        "category": "remeras"
+        "category": "remeras",
+        "stock": 11
     },
     {
         "id": 3,
@@ -21,7 +23,8 @@
         "descripcion": "Remera flor",
         "precio": 7500,
         "img": "../../img/remera-2.webp",
-        "category": "remeras"
+        "category": "remeras",
+        "stock": 9
     },
     {
         "id": 4,
@@ -29,7 +32,8 @@
         "descripcion": "Remera espectacular para todo",
         "precio": 6500,
         "img": "../../img/remera-3.webp",
-        "category": "remeras"
+        "category": "remeras",
+        "stock": 4
     },
     {
         "id": 5,
@@ -37,14 +41,16 @@
         "descripcion": "Sweater para aguantar el ofri",
         "precio": 34000,
         "img": "../../img/sweaters.webp",
-        "category": "sweaters"
+        "category": "sweaters",
+        "stock": 10
     }, {
         "id": 6,
         "nombre": "Vestido 1",
         "descripcion": "Vestido margarita",
         "precio": 25000,
         "img": "../../img/vestido1.webp",
-        "category": "vestidos"
+        "category": "vestidos",
+        "stock": 2
     },
     {
         "id": 7,
@@ -52,7 +58,8 @@
         "descripcion": "Vestido de colores",
         "precio": 27000,
         "img": "../../img/vestido2.webp",
-        "category": "vestidos"
+        "category": "vestidos",
+        "stock": 5
     },
     {
         "id": 8,
@@ -60,6 +67,7 @@
         "descripcion": "Vestido casual para todos los dias",
         "precio": 22000,
         "img": "../../img/vestido3.webp",
-        "category": "vestidos"
+        "category": "vestidos",
+        "stock": 4
     }
 ]

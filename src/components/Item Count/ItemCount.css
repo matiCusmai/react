@@ -1,0 +1,48 @@
+.cont__cont {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.cont__cont div span {
+    color: black;
+}
+
+.cont__cont h4 {
+    padding-bottom: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-weight: 700;
+}
+
+.cont__cont div {
+    padding-bottom: 20px;
+
+}
+
+.btn__cont {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    border: solid 1px gray;
+    text-align: center;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.btn__cont:hover {
+    background-color: lightgrey;
+    border-color: gray;
+}
+
+.cont {
+    padding: 0 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: black;
+    text-align: center;
+}

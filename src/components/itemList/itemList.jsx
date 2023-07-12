@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import ItemCard from "../ItemCard/ItemCard"
 import "./ItemList.css"
 
-const ItemList = ({ Items }) => {
+const ItemList = ({Items}) => {
 
     return (
         <div>
@@ -14,10 +14,9 @@ const ItemList = ({ Items }) => {
                 <Link className="productos__link" to="/productos/sweaters">Sweaters</Link>
             </div>
             <hr />
-
             <div className="cont__main">
                 {
-                    Items.map((prod) => <ItemCard key={prod.id} item={prod} />)
+                    Items.map((prod) => <ItemCard key={prod.id} {...prod}/>)
                 }
             </div>
         </div>

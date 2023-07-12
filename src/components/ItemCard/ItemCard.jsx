@@ -1,17 +1,20 @@
+import { Link } from "react-router-dom"
+import "./ItemCard.css"
 
 
-const ItemCard = ({item}) => {
+const ItemCard = ({ id, nombre, descripcion, precio, img }) => {
+
     return (
         <div className="container-items">
             <div className="item">
                 <figure>
-                    <img src={item.img} alt={item.nombre} />
+                    <img src={img} alt={nombre} />
                 </figure>
                 <div className="info-product">
-                    <h2>{item.nombre}</h2>
-                    <p>{item.descripcion}</p>
-                    <span className="price">Precio: ${item.precio}</span>
-                    <button>VER MAS</button>
+                    <h2>{nombre}</h2>
+                    <p>{descripcion}</p>
+                    <span className="price">Precio: ${precio}</span>
+                    <Link className="inf__prod__btn" to={`/detail/${id}`}>VER MAS</Link>
                 </div>
             </div>
         </div>
