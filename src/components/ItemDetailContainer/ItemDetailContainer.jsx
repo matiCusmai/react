@@ -10,8 +10,7 @@ const ItemDetailContainer = () => {
     const [loading, setLoading] = useState(true)
 
     const { itemId } = useParams()
-    console.log(item)
-    console.log(itemId)
+
 
 
     useEffect(() => {
@@ -19,7 +18,7 @@ const ItemDetailContainer = () => {
 
         pedirDatos()
             .then((res) => {
-                setItem(res.find((prod) => prod.id === Number(itemId) ))
+                setItem(res.find((prod) => prod.id === Number(itemId)))
             })
             .catch((err) => console.log(err))
             .finally(() => setLoading(false))
@@ -30,8 +29,8 @@ const ItemDetailContainer = () => {
         <div className="list__container">
             {
                 loading
-                ? <h2>Cargando...</h2>
-                : <ItemDetail {...item} />
+                    ? <h2>Cargando...</h2>
+                    : <ItemDetail {...item} />
             }
         </div>
     )

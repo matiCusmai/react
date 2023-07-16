@@ -1,20 +1,25 @@
+import { useEffect } from "react"
 
 
 
 
-const SelectTalle = ({setTalle}) => {
+const SelectTalle = ({setSelect, opciones}) => {
 
     
     const handleSelect = (e) => {
-        setTalle(e.target.value)
+        setSelect(e.target.value)
     }
+
+    useEffect(() => {
+        setSelect(opciones[0].value)
+    }, [])
 
     return (
 
             <select className="select" onChange={handleSelect}>
-                <option value="S">Small</option>
-                <option value="M">Medium</option>
-                <option value="L">Large</option>
+                {
+                    opciones.map((opt) => <option key={opt.value} value={opt.value}>{opt.value}</option>)
+                }
             </select>
 
 
