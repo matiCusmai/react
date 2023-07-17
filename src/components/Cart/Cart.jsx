@@ -20,21 +20,23 @@ const Cart = () => {
 
     return (
         <div className="cont__cart">
-            <h4>Compra:</h4>
+            <h4>Detalle de la compra:</h4>
             <hr />
             {
                 cart.map((prod) => (
-                    <div key={prod.id}>
-                        <h3>{prod.nombre}</h3>
+                    <div className="cont__carrito" key={prod.id}>
                         <img src={prod.img} alt={prod.nombre} />
-                        <p>Precio: ${prod.precio}</p>
-                        <p>Cantidad: {prod.cantidad}</p>
-                        <button onClick={() => eliminarProducto(prod.id)} className="inf__prod__btn"><VscTrash /></button>
-                        <hr />
+
+                       
+                        <p className="item__carrito">{prod.nombre}</p>
+                        <p className="item__carrito">Precio: ${prod.precio}</p>
+                        <p className="item__carrito">Cantidad: {prod.cantidad}</p>
+                        
+                        <button onClick={() => eliminarProducto(prod.id)} ><VscTrash /></button>
                     </div>
                 ))
             }
-            <div>
+            <div className="precio__total">
                 <h5>TOTAL: ${totalCompra()}</h5>
                 <hr />
                 <button onClick={vaciarCarrito} className="inf__prod__btn">VACIAR CARRITO</button>

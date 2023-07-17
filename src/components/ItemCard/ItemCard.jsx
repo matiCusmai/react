@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import "./ItemCard.css"
 
 
-const ItemCard = ({ id, nombre, descripcion, precio, img }) => {
+const ItemCard = ({ id, nombre, precio, img, stock }) => {
 
     return (
         <div className="container-items">
@@ -12,9 +12,13 @@ const ItemCard = ({ id, nombre, descripcion, precio, img }) => {
                 </figure>
                 <div className="info-product">
                     <h2>{nombre}</h2>
-                    <p>{descripcion}</p>
+
+                    {
+                        stock <= 5 &&
+                        <span style={{fontFamily:"arial", fontWeight: 700, color: "blue", fontSize: "10px", }}>QUEDAN SOLO {stock} UNIDADES !</span>
+                    }
                     <span className="price">Precio: ${precio}</span>
-                    <Link className="inf__prod__btn" to={`/detail/${id}`}>VER MAS</Link>
+                    <Link className="inf__prod__btn" to={`/detail/${id}`}>VER PRODUCTO</Link>
                 </div>
             </div>
         </div>
