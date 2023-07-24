@@ -47,16 +47,16 @@ const ItemDetail = ({ id, nombre, descripcion, precio, img, category, stock }) =
                 <img src={img} alt={nombre} />
 
                 <div className="cont__data__detail">
+                    <h4>Precio: ${precio}</h4>
                     <h2>{nombre}</h2>
                     <p>{descripcion}</p>
                     <span>Categoria: {category}</span>
-                    <h4>Precio: ${precio}</h4>
 
                     {
                         isInCart(id)
                             ? <div className="flex__btn">
                                 <button onClick={handleVolver} className="volver__btn">VOLVER</button>
-                                <Link className="inf__prod__btn" to="/cart">CONTINUAR CON LA COMPRA</Link>
+                                <Link className="inf__prod__btn" to="/cart">DETALLE DE LA COMPRA</Link>
                             </div>
                             : <div>
                                 <h3>Talle</h3>
@@ -70,8 +70,7 @@ const ItemDetail = ({ id, nombre, descripcion, precio, img, category, stock }) =
                                     setCantidad={setCantidad}
                                     handleAgregar={handleAgregar}
                                 />
-                    <button onClick={handleVolver} className="volver__btn">VOLVER</button>
-
+                                <button onClick={handleVolver} className="volver__btn">VOLVER</button>
                             </div>
                     }
                 </div>

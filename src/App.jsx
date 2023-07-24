@@ -26,7 +26,6 @@ function App() {
           <Route path="/nosotros" element={<Nosotros />} />
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/cart" element={<Cart />} />
-          {/* <Route path="*" element={<Navigate to={"/"} />} /> */}
         </Routes>
       </BrowserRouter>
     </CartProvider>

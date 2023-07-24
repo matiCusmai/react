@@ -11,13 +11,13 @@ const ItemCard = ({ id, nombre, precio, img, stock }) => {
                     <img src={img} alt={nombre} />
                 </figure>
                 <div className="info-product">
+                <span className="price">${precio}</span>
                     <h2>{nombre}</h2>
 
                     {
                         stock <= 5 &&
                         <span style={{fontFamily:"arial", fontWeight: 700, color: "blue", fontSize: "10px", }}>QUEDAN SOLO {stock} UNIDADES !</span>
                     }
-                    <span className="price">Precio: ${precio}</span>
                     <Link className="inf__prod__btn" to={`/detail/${id}`}>VER PRODUCTO</Link>
                 </div>
             </div>
