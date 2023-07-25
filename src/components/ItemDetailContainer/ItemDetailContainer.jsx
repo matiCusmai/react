@@ -22,12 +22,7 @@ const ItemDetailContainer = () => {
 
         getDoc(itemRef)
             .then((doc) => {
-
-                setItem({
-                    ...doc.data(),
-                    id: doc.id
-                })
-
+                setItem({...doc.data(), id: doc.id })
             })
             .catch(e => console.log(e))
             .finally(() => setLoading(false))
