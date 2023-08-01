@@ -6,7 +6,7 @@ import { Link } from "react-router-dom"
 
 const Cart = () => {
 
-    const { cart, totalCompra, vaciarCarrito, eliminarProducto } = useContext(CartContext)
+    const { cart, totalCompra, vaciarCarrito, eliminarProducto, finalizarCompra } = useContext(CartContext)
 
     if (cart.length === 0) {
         return (
@@ -25,13 +25,10 @@ const Cart = () => {
             {
                 cart.map((prod) => (
                     <div className="cont__carrito" key={prod.id}>
-                        <img src={prod.img} alt={prod.nombre} />
-
-                       
+                        <img src={prod.img} alt={prod.nombre} />                   
                         <p className="item__carrito">{prod.nombre}</p>
                         <p className="item__carrito">Precio: ${prod.precio}</p>
                         <p className="item__carrito">Cantidad: {prod.cantidad}</p>
-                        
                         <button onClick={() => eliminarProducto(prod.id)} ><VscTrash /></button>
                     </div>
                 ))
@@ -39,7 +36,10 @@ const Cart = () => {
             <div className="precio__total">
                 <h5>TOTAL: ${totalCompra()}</h5>
                 <hr />
+                <div className="cont-btn-compra">
                 <button onClick={vaciarCarrito} className="inf__prod__btn">VACIAR CARRITO</button>
+                <button onClick={finalizarCompra} className="seguir__btn">FINALIZAR COMPRA</button>
+                </div>
             </div>
 
         </div>
