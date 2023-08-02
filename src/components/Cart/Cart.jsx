@@ -3,10 +3,11 @@ import "./Cart.css"
 import { CartContext } from "../Context/CartContext"
 import { VscTrash } from "react-icons/vsc"
 import { Link } from "react-router-dom"
+import Confirmation from "../Confirmation/Confirmation"
 
 const Cart = () => {
 
-    const { cart, totalCompra, vaciarCarrito, eliminarProducto, finalizarCompra } = useContext(CartContext)
+    const { cart, totalCompra, vaciarCarrito, eliminarProducto } = useContext(CartContext)
 
     if (cart.length === 0) {
         return (
@@ -38,7 +39,7 @@ const Cart = () => {
                 <hr />
                 <div className="cont-btn-compra">
                 <button onClick={vaciarCarrito} className="inf__prod__btn">VACIAR CARRITO</button>
-                <button onClick={finalizarCompra} className="seguir__btn">FINALIZAR COMPRA</button>
+                <Link onClick={vaciarCarrito} className="seguir__btn" to= "/confirmar">FINALIZAR COMPRA</Link>
                 </div>
             </div>
 

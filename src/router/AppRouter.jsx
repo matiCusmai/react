@@ -9,6 +9,7 @@ import LoginScreen from "../components/Auth/LoginScreen"
 import { useContext } from "react"
 import { AuthContext } from "../components/Context/AuthContext"
 import RegisterScreen from "../components/Auth/RegisterScreen"
+import Confirmation from "../components/Confirmation/Confirmation"
 
 const AppRouter = () => {
   const { user } = useContext(AuthContext)
@@ -26,6 +27,7 @@ const AppRouter = () => {
                   <Route path="/detail/:itemId" element={<ItemDetailContainer />} />
                   <Route path="/nosotros" element={<Nosotros />} />
                   <Route path="/contacto" element={<Contacto />} />
+                  <Route path="/confirmar" element={<Confirmation />} />
                   <Route path="/cart" element={<Cart />} />
                 <Route path="*" element={<Navigate to="/" />}/>
                 </Routes>
