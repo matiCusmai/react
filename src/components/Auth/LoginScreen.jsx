@@ -14,7 +14,7 @@ const LoginScreen = () => {
     })
 
     const handleInputChange = (e) => {
-        console.log(e.target.name)
+      
         setValues({
             ...values,
             [e.target.name]: e.target.value

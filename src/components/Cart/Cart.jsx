@@ -3,7 +3,6 @@ import "./Cart.css"
 import { CartContext } from "../Context/CartContext"
 import { VscTrash } from "react-icons/vsc"
 import { Link } from "react-router-dom"
-import Confirmation from "../Confirmation/Confirmation"
 
 const Cart = () => {
 

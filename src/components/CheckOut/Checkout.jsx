@@ -3,23 +3,25 @@ import { useState } from "react"
 import "./checkout.css"
 import { useCartContext } from "../Context/CartContext"
 import { Navigate } from "react-router-dom"
-
+import { collection, addDoc } from "firebase/firestore";
+import { db } from "../../firebase/config";
+import { Link } from "react-router-dom";
 
 
 const Checkout = () => {
 
-    const { cart, totalCompra } = useCartContext()
+    const { cart, totalCompra, vaciarCarrito } = useCartContext()
+    const [orderId, setOrderId] = useState(null)
 
     const [values, setValues] = useState(
         {
-            nombre:'',
-            direccion:'',
-            email:''
+            nombre: '',
+            direccion: '',
+            email: ''
         }
     )
 
     const handleInputChange = (e) => {
-        console.log(e.target.name)
         setValues({
             ...values,
             [e.target.name]: e.target.value
@@ -49,7 +51,27 @@ const Checkout = () => {
             fecha: new Date()
         }
 
-        console.log(orden)
+        const ordersRef = collection(db, "orders")
+        addDoc(ordersRef, orden)
+            .then((doc) => {
+                setOrderId(doc.id)
+                vaciarCarrito()
+            })
+            .catch(err => console.log(err))
+    }
+
+    if (orderId) {
+        return (
+            <div className="cont__nosotros">
+                <h4>Confirmación de compra</h4>
+                <hr />
+                <div className="cont__confirmation">
+                    <span className="confirmation" >SU COMPRA SE REALIZÓ CON ÉXITO!</span>
+                    <p>Tu número de compra es: <strong>{orderId}</strong></p>
+                    <Link to="/" className="seguir__btn">Volver a la tienda</Link>
+                </div>
+            </div>
+        )
     }
 
     if (cart.length === 0) {
