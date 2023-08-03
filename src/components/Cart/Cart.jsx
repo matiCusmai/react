@@ -39,7 +39,7 @@ const Cart = () => {
                 <hr />
                 <div className="cont-btn-compra">
                 <button onClick={vaciarCarrito} className="inf__prod__btn">VACIAR CARRITO</button>
-                <Link onClick={vaciarCarrito} className="seguir__btn" to= "/confirmar">FINALIZAR COMPRA</Link>
+                <Link className="seguir__btn" to= "/checkout">FINALIZAR COMPRA</Link>
                 </div>
             </div>
 
